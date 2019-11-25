@@ -27,7 +27,7 @@ public class register extends AppCompatActivity {
     private EditText name,email, password, c_password;
     private Button btn_regist;
     private ProgressBar loading;
-    private static  String URL_REGIST = "http://localhost/android_register_login/register.php";
+    private static  String URL_REGIST = "http://192.168.1.66/android_register_login/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +91,5 @@ public class register extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringrequest);
-
     }
 }
