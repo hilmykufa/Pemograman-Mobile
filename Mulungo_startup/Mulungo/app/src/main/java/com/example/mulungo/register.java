@@ -59,8 +59,8 @@ public class register extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonobject= new JSONObject(response);
-                            String succes = jsonobject.getString("success");
-                            if (succes.equals("1")){
+                            String success = jsonobject.getString("success");
+                            if (success.equals("1")){
                                 Toast.makeText(register.this, "Register Success",Toast.LENGTH_SHORT);
                             }
                         }catch (JSONException e){
