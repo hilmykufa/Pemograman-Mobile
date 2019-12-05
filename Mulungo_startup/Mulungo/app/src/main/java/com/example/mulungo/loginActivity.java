@@ -2,6 +2,7 @@ package com.example.mulungo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,9 +13,11 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,7 +31,7 @@ public class loginActivity extends AppCompatActivity {
     private Button btn_login;
     private TextView link_regist;
     private ProgressBar loading;
-    private static String URL_LOGIN="";
+    private static String URL_LOGIN="http://192.168.1.66/android_register_login/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,7 @@ public class loginActivity extends AppCompatActivity {
                 String mEmail=email.getText().toString().trim();
                 String mPass=password.getText().toString().trim();
                 if(!mEmail.isEmpty()|| !mPass.isEmpty()){
-                    Login();
+                    Login(mEmail,mPass);
                 }else {
                     email.setError("Please insert email");
                     password.setError("Please insert Password");
@@ -52,7 +55,7 @@ public class loginActivity extends AppCompatActivity {
             }
         });
     }
-    private void  Login(String email, final String password){
+    private void  Login(final String email, final String password){
         loading.setVisibility(View.VISIBLE);
         btn_login.setVisibility(View.GONE);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
@@ -68,8 +71,12 @@ public class loginActivity extends AppCompatActivity {
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     String name = object.getString("name").trim();
                                     String email = object.getString("email").trim();
-                                    Toast.makeText(loginActivity.this, "Success Login. \nYour name:"
-                                            + name, Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(loginActivity.this,HomeActivity.class);
+                                    intent.putExtra("name", name);
+                                    intent.putExtra("email", email);
+                                    startActivity(intent);
+
+                                    loading.setVisibility(View.GONE);
                                 }
                             }
                         } catch (JSONException e) {
@@ -92,6 +99,8 @@ public class loginActivity extends AppCompatActivity {
                 params.put("password",password);
                 return params;
             }
-            }
+            };
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
         }
 }

@@ -2,6 +2,7 @@ package com.example.mulungo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,9 @@ public class register extends AppCompatActivity {
                             String success = jsonobject.getString("success");
                             if (success.equals("1")){
                                 Toast.makeText(register.this, "Register Success",Toast.LENGTH_SHORT);
+                                Intent intent = new Intent(register.this, loginActivity.class);
+                                startActivity(intent);
+                                loading.setVisibility(View.GONE);
                             }
                         }catch (JSONException e){
                             e.printStackTrace();

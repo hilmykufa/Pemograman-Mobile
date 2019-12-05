@@ -28,7 +28,7 @@
         android:id="@+id/layoutpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
+        android:layout_below="@+id/layoutemail"
         app:passwordToggleEnabled="true">
         <EditText
             android:id="@+id/Password"
@@ -50,8 +50,8 @@
         android:textColor="@android:color/white"
         android:hint="Login"
         android:layout_width="match_parent"
-
-        android:layout_height="55dp"></Button>
+        android:layout_height="55dp"
+        android:layout_below="@id/layoutpassword"></Button>
 
 
 </RelativeLayout>
