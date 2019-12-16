@@ -58,11 +58,13 @@
         app:srcCompat="@drawable/e_logo" />
     <LinearLayout
         android:id="@+id/Layout_input"
-        android:layout_width="566dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:lineSpacingExtra="-5sp"
-        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:background="#e7e7e7"
+        android:gravity="center"
         android:orientation="vertical"
         android:layout_below="@+id/imageView17">
 
@@ -151,6 +153,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:layout_gravity="center_vertical">
                 <Button
                     android:id="@+id/btn_login"

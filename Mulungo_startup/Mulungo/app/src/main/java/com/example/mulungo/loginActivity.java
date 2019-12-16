@@ -29,7 +29,7 @@ import java.util.Map;
 public class loginActivity extends AppCompatActivity {
     private EditText email,password;
     private Button btn_login;
-    private TextView link_regist;
+    private Button btn_regis;
     private ProgressBar loading;
     private static String URL_LOGIN="http://192.168.1.66/android_register_login/login.php";
     SessionManager sessionManager;
@@ -43,6 +43,7 @@ public class loginActivity extends AppCompatActivity {
         email=findViewById(R.id.Email);
         password=findViewById(R.id.Password);
         btn_login=findViewById(R.id.btn_login);
+        btn_regis=findViewById(R.id.btn_regis);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +55,13 @@ public class loginActivity extends AppCompatActivity {
                     email.setError("Please insert email");
                     password.setError("Please insert Password");
                 }
+            }
+        });
+        btn_regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this,register.class);
+                startActivity(intent);
             }
         });
     }
