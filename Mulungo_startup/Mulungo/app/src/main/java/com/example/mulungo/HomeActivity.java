@@ -20,7 +20,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         sessionManager = new SessionManager(this);
         sessionManager.checkLogin();
-
         name=findViewById(R.id.name);
         email=findViewById(R.id.email);
         HashMap<String, String> user = sessionManager.getUSerDetail();

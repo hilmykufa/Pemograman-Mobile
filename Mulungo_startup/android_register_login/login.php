@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
     include 'connect.php';
 
-    $sql = "SELECT * FROM users_table WHERE email='$email' ";
+    $sql = "SELECT * FROM g_collector WHERE gc_email='$email' ";
 
     $response = mysqli_query($conn, $sql);
 
@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         
         $row = mysqli_fetch_assoc($response);
 
-        if ( password_verify($password, $row['password']) ) {
+        if ( password_verify($password, $row['gc_password']) ) {
             
-            $index['name'] = $row['name'];
-            $index['email'] = $row['email'];
-            $index['id'] = $row['id'];
+            $index['name'] = $row['gc_name'];
+            $index['email'] = $row['gc_email'];
+            $index['id'] = $row['gc_id'];
 
             array_push($result['login'], $index);
 

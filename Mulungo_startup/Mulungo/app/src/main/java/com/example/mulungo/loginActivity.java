@@ -86,12 +86,13 @@ public class loginActivity extends AppCompatActivity {
                                     intent.putExtra("name", name);
                                     intent.putExtra("email", email);
                                     startActivity(intent);
-
                                     loading.setVisibility(View.GONE);
+                                    btn_login.setVisibility(View.VISIBLE);
                                 }
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            btn_login.setVisibility(View.VISIBLE);
                             Toast.makeText(loginActivity.this, "Login Error" + e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
