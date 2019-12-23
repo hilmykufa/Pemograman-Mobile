@@ -12,12 +12,12 @@ public class SessionManager {
     public Context context;
     int PRIVATE_MODE = 0;
     private static final String PREF_NAME = "LOGIN";
-    private static final String LOGIN = "IS LOGIN";
+    private static final String LOGIN = "IS_LOGIN";
     public static final String NAME = "NAME";
     public static final String EMAIL = "EMAIL";
     public SessionManager(Context context){
-        this.context=context;
-        sharedPreferences = context.getSharedPreferences("LOGIN",PRIVATE_MODE);
+        this.context = context;
+        sharedPreferences = context.getSharedPreferences(PREF_NAME,PRIVATE_MODE);
         editor = sharedPreferences.edit();
     }
     public void  createSession(String name, String email){

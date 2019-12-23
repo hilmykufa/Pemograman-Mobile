@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     require_once 'connect.php';
 
-    $sql = "UPDATE users_table SET name='$name', email='$email' WHERE id='$id' ";
+    $sql = "UPDATE g_collector SET gc_name='$name', gc_email='$email' WHERE id='$id' ";
 
     if(mysqli_query($conn, $sql)) {
 

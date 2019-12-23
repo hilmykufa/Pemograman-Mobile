@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
     require_once 'connect.php';
 
-    $sql = "SELECT * FROM users_table WHERE id='$id' ";
+    $sql = "SELECT * FROM g_collector WHERE id='$id' ";
 
     $response = mysqli_query($conn, $sql);
 

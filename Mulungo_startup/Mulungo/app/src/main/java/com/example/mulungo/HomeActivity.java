@@ -22,13 +22,14 @@ public class HomeActivity extends AppCompatActivity {
         sessionManager.checkLogin();
         name=findViewById(R.id.name);
         email=findViewById(R.id.email);
+        btn_logout=findViewById(R.id.btn_logout);
         HashMap<String, String> user = sessionManager.getUSerDetail();
-        String mName = user.get(SessionManager.NAME);
-        String mEmail = user.get(SessionManager.EMAIL);
+        String mName = user.get(sessionManager.NAME);
+        String mEmail = user.get(sessionManager.EMAIL);
         name.setText(mName);
         email.setText(mEmail);
         //Intent intent = getIntent();
-        //String extraName = intent.getStringExtra("name");
+       // String extraName = intent.getStringExtra("name");
        // String extraMail = intent.getStringExtra("email");
 
         //name.setText(extraName);

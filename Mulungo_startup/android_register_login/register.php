@@ -6,8 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] =='POST'){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $password = password_hash($password, PASSWORD_DEFAULT);
-
     require_once 'connect.php';
 
     $sql = "INSERT INTO g_collector (gc_name, gc_email, gc_password) VALUES ('$name', '$email', '$password')";

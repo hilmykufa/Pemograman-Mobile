@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require_once 'connect.php';
 
-    $sql = "UPDATE users_table SET photo='$finalPath' WHERE id='$id' ";
+    $sql = "UPDATE g_collector SET gc_photo='$finalPath' WHERE gc_id='$id' ";
 
     if (mysqli_query($conn, $sql)) {
         

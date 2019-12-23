@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/Login"
-        android:layout_width="171dp"
-        android:layout_height="88dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="LOGIN"
         android:textColor="@android:color/white"
@@ -29,69 +29,26 @@
         android:textStyle="bold"
         app:fontFamily="@font/allerta"
         android:layout_below="@+id/logo1"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintBottom_toTopOf="@+id/textView31"
-        app:layout_constraintEnd_toEndOf="@+id/textView31"
-        app:layout_constraintStart_toStartOf="@+id/textView31" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:lineSpacingExtra="-5sp"
-        android:text="Masuk jika anda sudah terdaftar sebagai Garbage Collector atau Merchant"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        app:fontFamily="@font/allerta"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/Login" />
+        android:layout_centerHorizontal="true" />
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="101dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:lineSpacingExtra="-5sp"
-        android:layout_below="@id/textView31"
+        android:layout_below="@id/Login"
         app:srcCompat="@drawable/e_logo" />
     <LinearLayout
         android:id="@+id/Layout_input"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:lineSpacingExtra="-5sp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:background="#e7e7e7"
+        android:background="#ffff"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_below="@+id/imageView17">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="-5sp"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="169dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center_vertical"
-                android:text="Garbage Collector"
-                tools:scaleX="0.7" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="169dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:scaleY="0.7"
-                android:text="Merchant"
-                tools:scaleX="0.7" />
-        </LinearLayout>
-
         <LinearLayout
             android:id="@+id/constraintLayout4"
             android:layout_width="match_parent"
@@ -108,45 +65,45 @@
                     app:passwordToggleEnabled="true">
                     <EditText
                         android:id="@+id/Email"
-                        android:layout_width="300dp"
-                        android:layout_height="33dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
                         android:layout_marginBottom="8dp"
-                        android:ems="10"
+                        android:ems="12"
+                        android:layout_marginRight="5dp"
                         android:gravity="center_vertical"
                         android:inputType="textEmailAddress"
                         android:hint="Email Address"
                         android:textSize="12sp"
                         tools:textColor="#d4d4d4" />
                 </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/Password"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:passwordToggleEnabled="true">
-                    <EditText
-                        android:id="@+id/Password"
-                        android:layout_width="300dp"
-                        android:layout_height="33dp"
-                        android:layout_marginEnd="72dp"
-                        android:layout_marginBottom="8dp"
-                        android:ems="10"
-                        android:gravity="center_vertical"
-                        android:hint="Password"
-                        android:inputType="textPassword"
-                        android:textSize="12sp"
-                        tools:textColor="#d4d4d4" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="12sp"
+                    tools:textColor="#d4d4d4" />
+            </com.google.android.material.textfield.TextInputLayout>
             <TextView
                 android:id="@+id/textView33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="61dp"
                 android:layout_marginBottom="4dp"
+                android:layout_marginRight="20dp"
                 android:text="Belum terdaftar?"
                 android:textSize="10sp"
                 app:fontFamily="@font/allerta"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Email" />
+                android:layout_below="@id/Password" />
 
             <LinearLayout
                 android:id="@id/Layout_btn"
@@ -165,20 +122,17 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_regis"
-                    android:layout_width="wrap_content"
+                    android:layout_width="104dp"
                     android:layout_height="46dp"
+                    android:layout_gravity="center"
                     android:background="@android:color/white"
                     android:gravity="center"
                     android:text="REGISTER"
-                    android:layout_gravity="center"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/btn_login" />
             </LinearLayout>
         </LinearLayout>
@@ -190,9 +144,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
 </RelativeLayout>

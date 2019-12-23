@@ -81,26 +81,34 @@ public class loginActivity extends AppCompatActivity {
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     String name = object.getString("name").trim();
                                     String email = object.getString("email").trim();
-                                    sessionManager.createSession(name,email);
-                                    Intent intent = new Intent(loginActivity.this,HomeActivity.class);
+                                   sessionManager.createSession(name,email);
+                                   Intent intent = new Intent(loginActivity.this,HomeActivity.class);
                                     intent.putExtra("name", name);
                                     intent.putExtra("email", email);
                                     startActivity(intent);
+                                    finish();
                                     loading.setVisibility(View.GONE);
                                     btn_login.setVisibility(View.VISIBLE);
+                                    //Toast.makeText(loginActivity.this,"succes"+name,Toast.LENGTH_SHORT).show();
                                 }
+                            }
+                            else{
+                                loading.setVisibility(View.GONE);
+                                btn_login.setVisibility(View.VISIBLE);
+                                Toast.makeText(loginActivity.this,"succes",Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            loading.setVisibility(View.GONE);
                             btn_login.setVisibility(View.VISIBLE);
-                            Toast.makeText(loginActivity.this, "Login Error" + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(loginActivity.this, "Login Error1" + e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                         public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(loginActivity.this, "Login Error" + error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(loginActivity.this, "Login Error mas" + error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 })
         {
