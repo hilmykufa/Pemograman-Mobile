@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="354dp"
+        android:layout_height="431dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Nama"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="90dp"
+            android:text="Jenis Kelamin"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="130dp"
+            android:text="Tempat Lahir"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="170dp"
+            android:text="Tanggal Lahir"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="210dp"
+            android:text="Alamat"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="250dp"
+            android:text="Email"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="290dp"
+            android:text="Password"
+            app:fontFamily="@font/allerta" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="330dp"
+            android:text="No. Hp"
+            app:fontFamily="@font/allerta" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="85dp"
+            android:ems="10"
+            android:gravity="right"
+            android:text="Jenis Kelamin"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="165dp"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="date"
+            android:text="Tanggal Lahir"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="205dp"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="Alamat"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="245dp"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="textEmailAddress"
+            android:text="Email"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="325dp"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="phone"
+            android:text="No. Hp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="285dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="Password"
+            android:inputType="phone"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="125dp"
+            android:ems="10"
+            android:gravity="right"
+            android:text="Tempat Lahir"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="45dp"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="textPersonName"
+            android:text="Nama Lengkap"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="375dp"
+            android:background="@color/colorPrimary"
+            android:text="SIMPAN"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="375dp"
+            android:background="@android:color/black"
+            android:text="BATAL"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="176dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Account Settings"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/allerta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ubah dan lengkapi data-data anda"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:fontFamily="@font/allerta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
